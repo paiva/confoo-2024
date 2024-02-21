@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "confoo-2024"
+version = "0.1.0"
+description = "Confoo AWS Lambda Demo"
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+Flask = "^3.0.2"
+boto3 = "^1.34.46"
+requests = "^2.31.0"
+loguru = "^0.7.2"
+python-dotenv = "^1.0.1"
+
+
+[tool.poetry.group.dev.dependencies]
+black = {version = "^24.2.0", allow-prereleases = true}
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
