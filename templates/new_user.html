@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New User Registration</title>
+</head>
+<body>
+
+    <h2>New User Registration Form</h2>
+
+    <form action="/add_new_user" method="post">
+        <label for="user_id">User ID:</label><br>
+        <input type="text" id="user_id" name="user_id" required><br>
+
+        <label for="firstname">First Name:</label><br>
+        <input type="text" id="firstname" name="firstname" required><br>
+
+        <label for="lastname">Last Name:</label><br>
+        <input type="text" id="lastname" name="lastname" required><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="affiliation">Affiliation:</label><br>
+        <input type="text" id="affiliation" name="affiliation"><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+</body>
+</html>

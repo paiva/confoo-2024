@@ -1,6 +1,5 @@
 import json
 import decimal
-from boto3.dynamodb.conditions import Key
 import boto3
 
 
@@ -12,6 +11,13 @@ class DecimalEncoder(json.JSONEncoder):
         return super(DecimalEncoder, self).default(o)
 
 
+# "`lambda_handler`: Entry point for the lambda function"
+#
+# "The `event` object contains information from the invoker, which could be an"
+# "AWS service or a custom application"
+#
+# "The `context` object provides methods and properties that provide information"
+# "about the invocation, function, and execution environment.#
 def lambda_handler(event, context):
     # print("Received event: " + json.dumps(event))
     dynamodb = boto3.resource("dynamodb")
@@ -22,3 +28,7 @@ def lambda_handler(event, context):
 
     items = response["Items"]
     return {"statusCode": 200, "body": json.dumps(items, cls=DecimalEncoder)}
+
+
+# Full Configuration
+# https://us-east-1.console.aws.amazon.com/lambda/home?region=us-east-1#/functions/api_get_users?tab=configure
