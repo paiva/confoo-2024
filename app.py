@@ -58,7 +58,9 @@ def add_new_user():
     # Make a POST request to the Lambda function via API Gateway
     # Pass the dictionary to `json`, letting `requests` handle the conversion
     response = requests.post(
-        endpoint_url, json=form_data, headers={"Content-Type": "application/json"}
+        endpoint_url,
+        json=form_data,
+        headers={"Content-Type": "application/json"},
     )
 
     logger.info(response)
